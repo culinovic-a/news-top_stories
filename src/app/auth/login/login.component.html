@@ -1,1 +1,27 @@
-<p>login works!</p>
+<div class="container">
+  <div class="login">
+    <h2 class="login-header">Log in</h2>
+
+    <form
+      #frmLogin="ngForm"
+      (ngSubmit)="onLogin(frmLogin)"
+      class="login-container"
+    >
+      <p>
+        <input type="email" name="email" placeholder="Email" ngModel required />
+      </p>
+      <p>
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          ngModel
+          required
+        />
+      </p>
+      <p>
+        <input type="submit" value="Send" />
+      </p>
+    </form>
+  </div>
+</div>

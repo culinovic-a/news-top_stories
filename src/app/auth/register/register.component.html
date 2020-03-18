@@ -1,1 +1,30 @@
-<p>register works!</p>
+<div class="container">
+  <div class="login">
+    <h2 class="login-header">Register</h2>
+
+    <form
+      #frmRegister="ngForm"
+      (ngSubmit)="onRegister(frmRegister)"
+      class="login-container"
+    >
+      <p>
+        <input type="text" name="name" placeholder="name" ngModel required />
+      </p>
+      <p>
+        <input type="email" placeholder="Email" name="email" ngModel required />
+      </p>
+      <p>
+        <input
+          type="password"
+          placeholder="Password"
+          name="password"
+          ngModel
+          required
+        />
+      </p>
+      <p>
+        <input type="submit" value="Send" />
+      </p>
+    </form>
+  </div>
+</div>
