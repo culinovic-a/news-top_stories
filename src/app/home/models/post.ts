@@ -1,4 +1,4 @@
-export class Post {
+export interface Post {
   source: {
     id: string;
     name: string;

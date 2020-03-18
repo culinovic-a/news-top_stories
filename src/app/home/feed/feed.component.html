@@ -1,0 +1,28 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>New York Times Top Stories</span>
+    <span class="example-spacer"></span>
+    <a href="#">Log Out</a>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<div class="content">
+  <mat-card class="example-card" *ngFor="let post of Post">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title> {{ post.title }} </mat-card-title>
+      <mat-card-subtitle> {{ post.description }} </mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]="getSantizeUrl(post.urlToImage)" />
+    <mat-card-content>
+      <p>
+        {{ post.content }}
+      </p>
+      <a href="{{ post.url }}" target="_blank"
+        >Read the rest of those characters</a
+      >
+    </mat-card-content>
+  </mat-card>
+  <!-- 
+        <mat-paginator [length]="38" [pageSize]="10"> </mat-paginator> -->
+</div>

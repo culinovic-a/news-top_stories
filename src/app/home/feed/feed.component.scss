@@ -1,0 +1,19 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.example-header-image {
+  background-size: cover;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .example-card {
+    max-width: 500px;
+    margin-bottom: 30px;
+  }
+}
