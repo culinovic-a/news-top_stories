@@ -8,9 +8,9 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-feed',
   templateUrl: './feed.component.html',
-  styleUrls: ['./feed.component.scss']
+  styleUrls: ['./feed.component.scss'],
 })
-export class FeedComponent implements OnInit {
+export class FeedComponent implements OnInit, OnDestroy {
   Post: any = [];
   private subscription: Subscription;
 
@@ -28,7 +28,7 @@ export class FeedComponent implements OnInit {
   loadPosts() {
     return (this.subscription = this.restApi
       .getPosts()
-      .subscribe(data => (this.Post = data['articles'])));
+      .subscribe((data) => (this.Post = data['articles'])));
   }
 
   getSantizeUrl(url: string) {
@@ -39,8 +39,8 @@ export class FeedComponent implements OnInit {
     this.subscription.unsubscribe();
   }
 
-  logOut() {
-    this.authService.logout();
-    this.router.navigateByUrl('/auth');
-  }
+  // logOut() {
+  // this.authService.logout();
+  // this.router.navigateByUrl('/auth');
+  // }
 }

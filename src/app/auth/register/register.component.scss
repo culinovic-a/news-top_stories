@@ -12,10 +12,9 @@
 }
 
 .login-header {
-  background: #28d;
+  background-color: #343333;
   padding: 20px;
   font-size: 1.4em;
-  font-weight: normal;
   text-align: center;
   text-transform: uppercase;
   color: #fff;
@@ -26,7 +25,6 @@
   padding: 12px;
 }
 
-/* Every row inside .login-container is defined with p tags */
 .login p {
   padding: 12px;
 }
@@ -43,21 +41,8 @@
   font-size: 0.95em;
 }
 
-.login input[type='email'],
-.login input[type='password'] {
-  background: #fff;
-  border-color: #bbb;
-  color: #555;
-}
-
-/* Text fields' focus effect */
-.login input[type='email']:focus,
-.login input[type='password']:focus {
-  border-color: #888;
-}
-
 .login input[type='submit'] {
-  background: #28d;
+  background-color: #343333;
   border-color: transparent;
   color: #fff;
   cursor: pointer;
@@ -65,9 +50,4 @@
 
 .login input[type='submit']:hover {
   background: #17c;
-}
-
-/* Buttons' focus effect */
-.login input[type='submit']:focus {
-  border-color: #05a;
 }

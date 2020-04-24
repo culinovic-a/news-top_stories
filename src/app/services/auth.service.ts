@@ -7,7 +7,7 @@ import { Observable, BehaviorSubject } from 'rxjs';
 import { tap } from 'rxjs/operators';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AuthService {
   // AUTH_SERVER: string = 'http://localhost:3000';
@@ -41,11 +41,11 @@ export class AuthService {
     );
   }
 
-  logout(): void {
-    this.token = '';
-    localStorage.removeItem('ACCESS_TOKEN');
-    localStorage.removeItem('EXPIRES_IN');
-  }
+  // logout(): void {
+  //   this.token = '';
+  //   localStorage.removeItem('ACCESS_TOKEN');
+  //   localStorage.removeItem('EXPIRES_IN');
+  // }
 
   private saveToken(token: string, expiresIn: string): void {
     localStorage.setItem('ACCESS_TOKEN', token);

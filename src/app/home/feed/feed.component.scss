@@ -1,3 +1,7 @@
+mat-toolbar {
+  background-color: #343333;
+}
+
 .example-spacer {
   flex: 1 1 auto;
 }
@@ -6,14 +10,40 @@
   background-size: cover;
 }
 
+.brand {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  color: #cac6c6;
+}
+
 .content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #d6d3d3;
 
   .example-card {
     max-width: 500px;
-    margin-bottom: 30px;
+    margin: 30px 0;
+
+    mat-card-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 24px;
+      color: #424242;
+    }
+
+    mat-card-content {
+      font-family: 'Open Sans', sans-serif;
+
+      a {
+        color: #343333;
+
+        &:hover {
+          color: black;
+          font-weight: bold;
+        }
+      }
+    }
   }
 }
